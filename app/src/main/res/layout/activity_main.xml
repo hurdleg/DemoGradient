@@ -23,11 +23,11 @@
         android:layout_below="@+id/colorSwatch"
         android:labelFor="@+id/hueSB"
         android:paddingBottom="8dp"
-        android:paddingEnd="16dp"
         android:paddingStart="16dp"
-        android:paddingTop="16dp"
+        android:paddingTop="8dp"
         android:text="Hue"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="30sp"/>
 
     <FrameLayout
         android:id="@+id/hueLayout"
@@ -44,7 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="32dp"
             android:contentDescription="Hue"
-            android:scaleType="matrix"
+            android:scaleType="fitXY"
             android:src="@drawable/gradient_hue" />
 
         <SeekBar
@@ -54,5 +54,33 @@
             android:max="359" />
     </FrameLayout>
 
+    <TextView
+        android:id="@+id/saturation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/hueLayout"
+        android:labelFor="@+id/saturationSB"
+        android:paddingBottom="8dp"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:text="Saturation"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="30sp"/>
+
+    <!-- TODO: copy 'n paste the gradient_saturation & gradient_brightness from assets to drawable -->
+
+    <!-- TODO: add a <FrameLayout> for the saturationLayout; appears below @+id/saturation -->
+    <!-- TODO: <FrameLayout> has 2 nested Views: <ImageView> and <SeekBar> -->
+    <!-- TODO: <ImageView> set the src property to @drawable/gradient_saturation -->
+
+    <!-- TODO: add a <TextView> for the value / brightness (id is brightness); appears below @+id/saturationLayout -->
+    <!-- TODO: add a <FrameLayout> for the brightnessLayout; appears below @+id/brightness -->
+    <!-- TODO: <FrameLayout> has 2 nested <View>s: <ImageView> and <SeekBar> -->
+    <!-- TODO: <ImageView> set the src property to @drawable/gradient_brightness -->
+
+    <!-- TODO: add a <HorizontalScrollView> to hold the button gallery; appears below @+brightnessLayout -->
+    <!-- TODO: <HorizontalScrollView> has 1 nested <View>: <LinearLayout> with a horizontal orientation -->
+    <!-- TODO: <LinearLayout> has 15 nested <Button> views. -->
 
 </RelativeLayout>
